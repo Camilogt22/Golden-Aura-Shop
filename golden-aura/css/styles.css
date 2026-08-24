@@ -1,0 +1,430 @@
+:root {
+  --color-dorado: #c9a227;
+  --color-negro: #111111;
+  --color-crema: #f6f0e6;
+  --color-texto: #333333;
+}
+
+/* body section*/
+body {
+  margin: 0;
+  background-color: var(--color-crema);
+  color: var(--color-texto);
+}
+
+/* header section*/
+.site-header {
+  background-color: var(--color-negro);
+}
+
+.site-header .nav {
+  gap: 45px;
+}
+
+.brand-name {
+  color: var(--color-dorado);
+  font-size: 1.25rem;
+}
+
+.nav-link-golden {
+  color: var(--color-crema);
+  transition: color 0.3s ease;
+}
+
+.nav-link-golden:hover,
+.nav-link-golden:focus {
+  color: var(--color-dorado);
+}
+
+.cart-button {
+  padding: 8px 12px;
+  background-color: transparent;
+  border: 1px solid var(--color-dorado);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-button:hover,
+.cart-button:focus {
+  background-color: var(--color-dorado);
+}
+
+#cart-count {
+  display: inline-block;
+  min-width: 20px;
+  margin-left: 6px;
+  padding: 2px 6px;
+
+  background-color: var(--color-dorado);
+  color: var(--color-negro);
+
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* hero section*/
+.hero-section {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      rgba(17, 17, 17, 0.75),
+      rgba(17, 17, 17, 0.65)
+    ),
+    url("../assets/images/fondo-hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-label {
+  color: var(--color-dorado);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-section h1 {
+  color: var(--color-crema);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-slogan {
+  color: var(--color-dorado);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hero-description {
+  max-width: 500px;
+  color: var(--color-crema);
+  line-height: 1.7;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background-color: var(--color-dorado);
+  color: var(--color-negro);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  color: var(--color-negro);
+  transform: translateY(-3px);
+}
+.hero-product-image {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 30px auto 0;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.45));
+}
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: auto;
+    padding: 70px 0 40px;
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-product-image {
+    max-width: 300px;
+  }
+}
+
+/*section categorias*/
+.category-section {
+  padding-top: 20px;
+}
+
+.category-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.category-card:hover {
+  transform: translateY(-5px);
+}
+.category-card img {
+  height: 450px;
+  object-fit: cover;
+}
+
+/*section productos destacados*/
+
+.product-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  border-radius: 20px;
+  height: 320px;
+  object-fit: cover;
+  padding: 2px;
+  
+}
+
+.product-price {
+  color: var(--color-dorado);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* =========================================
+   NOSOTROS
+========================================= */
+
+.about-section {
+  background-color: var(--color-crema);
+}
+
+.about-eyebrow {
+  color: var(--color-dorado);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.about-title {
+  color: var(--color-negro);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  color: var(--color-gris-oscuro);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-card {
+  background-color: var(--color-negro);
+  color: var(--color-crema);
+
+  padding: 45px;
+  border-radius: 16px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.about-card h3 {
+  color: var(--color-dorado);
+  margin-bottom: 20px;
+}
+
+.about-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/*footer*/
+
+.site-footer {
+  background-color: var(--color-negro);
+  color: var(--color-crema);
+}
+
+.footer-brand {
+  color: var(--color-dorado);
+}
+
+.site-footer a {
+  color: var(--color-crema);
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: var(--color-dorado);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-dorado);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.checkout-summary {
+  background-color: var(--color-crema);
+  border-radius: 12px;
+}
+
+.checkout-summary article {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.checkout-summary article:last-child {
+  border-bottom: none;
+}
+
+#api-productos-container .product-card {
+  transition: transform 0.3s ease;
+}
+
+#api-productos-container .product-card:hover {
+  transform: translateY(-5px);
+}
+
+#api-estado {
+  min-height: 50px;
+}
+
+/* =========================================
+   HEADER FIJO AL HACER SCROLL
+========================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: var(--color-negro);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+  min-height: 700px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 70px 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* Columna del texto */
+
+.hero-section .col-md-6:first-child {
+  max-width: 650px;
+}
+
+
+/* PERfumería árabe */
+
+.hero-section h1 {
+  font-size: clamp(3.5rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+
+/* Tu esencia, tu distinción */
+
+.hero-section h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Texto descriptivo */
+
+.hero-section p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 620px;
+  margin-bottom: 2rem;
+}
+
+
+/* Botón */
+
+.hero-section .btn {
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  padding: 14px 30px;
+
+  border-radius: 8px;
+}
+
+
+/* Imagen del perfume */
+
+.hero-product-image {
+  width: 100%;
+  max-width: 630px;
+  max-height: 780px;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.45));
+}
+
+
+/* Columna donde está el perfume */
+
+.hero-section .col-md-6:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .hero-section {
+    min-height: auto;
+    padding: 70px 0 50px;
+    text-align: center;
+  }
+
+  .hero-section p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-product-image {
+    max-width: 300px;
+    margin-top: 40px;
+  }
+
+}
