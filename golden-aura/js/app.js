@@ -869,6 +869,29 @@ function asignarEventosCarrito() {
 
 }
 
+const menuOffcanvas = document.getElementById("menuOffcanvas");
+
+if (menuOffcanvas) {
+
+  const enlacesMenu =
+    menuOffcanvas.querySelectorAll(".menu-mobile .nav-link");
+
+  enlacesMenu.forEach((enlace) => {
+
+    enlace.addEventListener("click", () => {
+
+      const offcanvas =
+        bootstrap.Offcanvas.getInstance(menuOffcanvas);
+
+      if (offcanvas) {
+        offcanvas.hide();
+      }
+
+    });
+
+  });
+
+}
 
 // ======================================================
 // 10. ACTUALIZAR TODO EL CARRITO
@@ -937,8 +960,9 @@ function agregarProductoAlCarrito(productoId) {
 
   }
 
-
   actualizarCarrito();
+
+  alert(`${productoEncontrado.nombre} fue agregado al carrito.`);
 }
 
 function asignarEventosAgregar(contenedor) {

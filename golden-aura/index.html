@@ -13,29 +13,50 @@
 
 <body>
     <header class="site-header">
-        <div class="container d-flex flex-wrap align-items-center justify-content-between py-3">
+        <div class="container d-flex align-items-center justify-content-between py-3">
 
-            <a href="#inicio" class="d-flex align-items-center text-decoration-none">
-                <img src="./assets/icons/logo.png" alt="" width="48" height="48">
+            <!-- IZQUIERDA: HAMBURGUESA + LOGO -->
+            <div class="d-flex align-items-center gap-3">
 
-                <span class="brand-name ms-2 fw-bold">
-                    Golden Aura
-                </span>
-            </a>
+                <button type="button" class="menu-hamburguesa d-md-none" data-bs-toggle="offcanvas"
+                    data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Abrir menú">
+                    ☰
+                </button>
 
-            <nav aria-label="Navegación principal">
-                <ul class="nav">
+                <!-- DEJA AQUÍ TU LOGO COMO YA LO TIENES -->
+                <a href="#inicio" class="d-flex align-items-center text-decoration-none">
+                    <img src="assets/images/tu-logo.png" alt="" class="logo">
+
+                    <span class="brand-name">
+                        Golden Aura
+                    </span>
+                </a>
+
+            </div>
+
+
+            <!-- MENÚ NORMAL: SOLO ESCRITORIO -->
+            <nav class="d-none d-md-block" aria-label="Navegación principal">
+                <ul class="nav menu-nav">
+
                     <li class="nav-item">
-                        <a class="nav-link nav-link-golden" href="#inicio">Inicio</a>
+                        <a href="#inicio" class="nav-link nav-link-golden">
+                            Inicio
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link nav-link-golden" href="pages/productos.html">Productos</a>
+                        <a href="pages/productos.html" class="nav-link nav-link-golden">
+                            Productos
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link nav-link-golden" href="#nosotros">Nosotros</a>
+                        <a href="#nosotros" class="nav-link nav-link-golden">
+                            Nosotros
+                        </a>
                     </li>
+
                 </ul>
             </nav>
 
@@ -47,6 +68,61 @@
 
         </div>
     </header>
+
+    <div class="offcanvas offcanvas-start menu-offcanvas" tabindex="-1" id="menuOffcanvas"
+        aria-labelledby="menuOffcanvasTitulo">
+
+        <div class="offcanvas-header">
+
+            <h2 class="offcanvas-title" id="menuOffcanvasTitulo">
+                Golden Aura
+            </h2>
+
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Cerrar"></button>
+
+        </div>
+
+
+        <div class="offcanvas-body">
+
+            <nav aria-label="Menú móvil">
+
+                <ul class="nav flex-column menu-mobile">
+
+                    <li class="nav-item">
+
+                        <a href="#inicio" class="nav-link" >
+                            Inicio
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a href="pages/productos.html" class="nav-link">
+                            Productos
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a href="#nosotros" class="nav-link">
+                            Nosotros
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </div>
 
     <main>
 
